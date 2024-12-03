@@ -1,6 +1,7 @@
 module Day1.Main (part1, part2) where
 
 import Data.List
+import Util (countOf)
 
 day1InputFile :: String
 day1InputFile = "data/Day1/input.txt"
@@ -43,12 +44,6 @@ part2 = do
   let result = similarity $ parseLists contents
   print result
   return result
-
-countWith :: (a -> Bool) -> [a] -> Int
-countWith p = length . filter p
-
-countOf :: (Eq a) => a -> [a] -> Int
-countOf a = countWith (a ==)
 
 similarity :: ([Int], [Int]) -> Int
 similarity (xs, ys) = foldr simScore 0 xs

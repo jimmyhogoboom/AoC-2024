@@ -63,7 +63,9 @@ executable AoC2024
     -- Modules included in this executable, other than Main.
     other-modules:
       -- Paths_AoC2024
+      Util
       Day1.Main
+      Day2.Main
 
     data-dir:
       data
